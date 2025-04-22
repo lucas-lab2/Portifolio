@@ -1,0 +1,26 @@
+{
+  "web-projects": [
+    {
+      "title": "Real-Time Analytics Dashboard",
+      "description": "Built with React and D3.js for data visualization.",
+      "github_url": "https://yourusername.github.io/analytics-dashboard",
+      "tech": [
+        "React",
+        "D3.js",
+        "Node.js"
+      ]
+    }
+  ],
+  "python-projects": [
+    {
+      "title": "Image Recognition Model",
+      "description": "CNN model for object detection (TensorFlow/Keras).",
+      "github_url": "https://yourusername.github.io/image-recognition",
+      "tech": [
+        "Python",
+        "TensorFlow",
+        "OpenCV"
+      ]
+    }
+  ]
+}
