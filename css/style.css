@@ -7,6 +7,31 @@
     --text: #333;
 }
 
+header {
+    padding: 0.5rem 0; /* Reduced from 1rem */
+    height: 60px; /* Fixed height */
+  }
+  
+  .container {
+    padding: 0 20px; /* Ensure consistent padding */
+  }
+  
+  .logo {
+    font-size: 1.2rem; /* Slightly smaller logo */
+    margin: 0;
+    line-height: 60px; /* Vertically center */
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    line-height: 60px; /* Vertically center nav items */
+  }
+  
+  nav ul li {
+    margin-left: 1.5rem; /* Reduced from 2rem */
+  }
+
 body {
     font-family: 'Lato', sans-serif;
     line-height: 1.6;
