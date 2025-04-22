@@ -6,6 +6,8 @@
   <title>Lucas Miranda Portfolio</title>
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -24,8 +26,9 @@
   <!-- GLightbox -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
-<body class="bg-background text-primary font-sans antialiased">
+<body class="bg-background text-primary font-sans antialiased flex flex-col min-h-screen">
   <!-- Header -->
+  <main class="flex-grow">
   <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
     <div class="container mx-auto flex items-center justify-between p-4">
       <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
@@ -66,20 +69,28 @@
     <div class="relative text-center px-4 z-10">
       <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl scroll-reveal">Transforming Data into Intelligent Solutions</h1>
       <p class="mt-4 text-lg md:text-2xl text-white drop-shadow-lg scroll-reveal delay-200">Web Development, Data Science, AI/Machine Learning, and everything in between</p>
-      <a href="#projects" class="inline-block mt-8 px-6 py-3 bg-accent text-primary font-medium rounded hover:opacity-90 scroll-reveal delay-400">Explore My Work</a>
+      
     </div>
   </section>
 
+  </main>
+
   <!-- Footer -->
-  <footer class="bg-white dark:bg-primary py-6">
+   class="mt-auto bg-white dark:bg-primary py-6">
     <div class="container mx-auto text-center space-x-4">
       <a href="#" class="hover:text-accent">LinkedIn</a>
       <a href="#" class="hover:text-accent">Instagram</a>
+    </main>
+  
+  <footer class="mt-auto bg-white dark:bg-primary py-6">
+    <div class="container mx-auto text-center space-x-4">
+      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-accent">
+        <i class="fab fa-linkedin fa-2x"></i>
+      </a>
+      <a href="https://instagram.com/yourprofile" target="_blank" class="hover:text-accent">
+        <i class="fab fa-instagram fa-2x"></i>
+      </a>
     </div>
   </footer>
-
-  <!-- Scripts -->
-  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
-  <script src="assets/js/scripts.js"></script>
 </body>
 </html>
