@@ -1,78 +1,139 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Lucas Miranda</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body class="bg-background text-primary font-sans antialiased flex flex-col min-h-screen">
-  <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
-    <div class="container mx-auto flex items-center justify-between p-4">
-      <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
-      <nav class="hidden md:flex space-x-6 items-center">
-        <a href="index.html" class="hover:text-accent">Home</a>
-        <a href="about.html" class="hover:text-accent">About</a>
-        <a href="web.html" class="hover:text-accent">Web Development</a>
-        <a href="data_science.html" class="hover:text-accent">Data Science</a>
-        <a href="contact.html" class="hover:text-accent">Contact</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Lucas Miranda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body
+    class="bg-background text-primary font-sans antialiased flex flex-col min-h-screen"
+  >
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
+      <div class="container mx-auto flex items-center justify-between p-4">
+        <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
+        <nav class="hidden md:flex space-x-6 items-center">
+          <a href="index.html" class="hover:text-accent">Home</a>
+          <a href="about.html" class="hover:text-accent">About</a>
+          <a href="web.html" class="hover:text-accent">Web Development</a>
+          <a href="data_science.html" class="hover:text-accent">Data Science</a>
+          <a href="contact.html" class="hover:text-accent">Contact</a>
+        </nav>
+        <div class="flex items-center space-x-4 md:hidden">
+          <button id="dark-toggle" class="p-2 rounded focus:outline-none">
+            🌙
+          </button>
+          <button id="menu-btn" class="p-2 focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="hidden bg-white dark:bg-primary">
+        <a href="index.html" class="block px-4 py-2">Home</a>
+        <a href="about.html" class="block px-4 py-2">About</a>
+        <a href="web.html" class="block px-4 py-2">Web Development</a>
+        <a href="data_science.html" class="block px-4 py-2">Data Science</a>
+        <a href="contact.html" class="block px-4 py-2">Contact</a>
       </nav>
-      <div class="flex items-center space-x-4 md:hidden">
-        <button id="dark-toggle" class="p-2 rounded focus:outline-none">🌙</button>
-        <button id="menu-btn" class="p-2 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-        </button>
-      </div>
-    </div>
-    <nav id="mobile-menu" class="hidden bg-white dark:bg-primary">
-      <a href="index.html" class="block px-4 py-2">Home</a>
-      <a href="about.html" class="block px-4 py-2">About</a>
-      <a href="web.html" class="block px-4 py-2">Web Development</a>
-      <a href="data_science.html" class="block px-4 py-2">Data Science</a>
-      <a href="contact.html" class="block px-4 py-2">Contact</a>
-    </nav>
-  </header>
+    </header>
 
-  <!-- Contact Form -->
-  <section class="py-16">
-    <div class="container mx-auto md:flex gap-8 px-4">
-      <div class="md:w-1/2 scroll-reveal">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p>Recife, Pernambuco, Brasil</p>
-        <p>📧 lucasfelipedm880@gmail.com</p>
+    <!-- Contact Form -->
+    <section class="py-16">
+      <div class="container mx-auto md:flex gap-8 px-4">
+        <div class="md:w-1/2 scroll-reveal">
+          <h2 class="text-3xl font-bold mb-4">Contact</h2>
+          <p>Recife, Pernambuco, Brasil</p>
+          <p>📧 lucasfelipedm880@gmail.com</p>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 scroll-reveal">
+          <form
+            action="https://formsubmit.co/lucasfelipedm880@gmail.com"
+            method="POST"
+            class="space-y-4"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from portfolio site!"
+            />
+            <input
+              type="text"
+              name="Name"
+              placeholder="Name"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+            <input
+              type="text"
+              name="Phone"
+              placeholder="Phone Number"
+              class="w-full border rounded px-4 py-2"
+            />
+            <input
+              type="email"
+              name="Email"
+              placeholder="Email Address"
+              required
+              class="w-full border rounded px-4 py-2"
+            />
+            <textarea
+              name="Message"
+              placeholder="Message"
+              required
+              class="w-full border rounded px-4 py-2 h-32"
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-white text-black font-medium py-3 px-6 rounded border border-black hover:bg-black hover:text-white transition duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
       </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 scroll-reveal">
-        <form action="https://formsubmit.co/lucasfelipedm880@gmail.com" method="POST" class="space-y-4">
-          <input type="hidden" name="_subject" value="New message from portfolio site!">
-          <input type="text" name="Name" placeholder="Name" required class="w-full border rounded px-4 py-2" />
-          <input type="text" name="Phone" placeholder="Phone Number" class="w-full border rounded px-4 py-2" />
-          <input type="email" name="Email" placeholder="Email Address" required class="w-full border rounded px-4 py-2" />
-          <textarea name="Message" placeholder="Message" required class="w-full border rounded px-4 py-2 h-32"></textarea>
-          <button type="submit" class="w-full bg-accent text-primary font-medium py-3 rounded hover:opacity-90">Send Message</button>
-        </form>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="mt-auto bg-white dark:bg-primary py-6">
+      <div class="container mx-auto text-center space-x-4">
+        <a
+          href="https://www.linkedin.com/in/lucas-miranda-061242191/"
+          target="_blank"
+          class="hover:text-accent"
+        >
+          <i class="fab fa-linkedin fa-2x"></i>
+        </a>
+        <a
+          href="https://www.instagram.com/lucasfelipedm/"
+          target="_blank"
+          class="hover:text-accent"
+        >
+          <i class="fab fa-instagram fa-2x"></i>
+        </a>
+        <a
+          href="https://github.com/lucas-lab2"
+          target="_blank"
+          class="hover:text-accent"
+        >
+          <i class="fab fa-github fa-2x"></i>
+        </a>
       </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Footer -->
-  
-  <footer class="mt-auto bg-white dark:bg-primary py-6">
-    <div class="container mx-auto text-center space-x-4">
-      <a href="https://www.linkedin.com/in/lucas-miranda-061242191/" target="_blank" class="hover:text-accent">
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a href="https://www.instagram.com/lucasfelipedm/" target="_blank" class="hover:text-accent">
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
-      <a href="https://github.com/lucas-lab2" target="_blank" class="hover:text-accent">
-        <i class="fab fa-github fa-2x"></i>
-      </a>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="assets/js/scripts.js"></script>
-</body>
+    <!-- Scripts -->
+    <script src="assets/js/scripts.js"></script>
+  </body>
 </html>
