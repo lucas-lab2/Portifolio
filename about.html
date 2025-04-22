@@ -1,83 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Me | My Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Me - Lucas Miranda</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown">
-            <a href="#">Projects</a>
-            <div class="dropdown-content">
-              <a href="projects/web.html">Web Development</a>
-              <a href="projects/data-science.html">Data Science & AI</a>
-            </div>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
+<body class="bg-background text-primary font-sans antialiased">
+  <!-- Header (same as index) -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent">About</a>
+        <a href="web.html" class="hover:text-accent">Web</a>
+        <a href="data_science.html" class="hover:text-accent">Data Science</a>
+        <a href="contact.html" class="hover:text-accent">Contact</a>
       </nav>
+      <div class="flex items-center space-x-4 md:hidden">
+        <button id="dark-toggle" class="p-2 rounded focus:outline-none">🌙</button>
+        <button id="menu-btn" class="p-2 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
     </div>
+    <nav id="mobile-menu" class="hidden bg-white dark:bg-primary">
+      <a href="index.html" class="block px-4 py-2">Home</a>
+      <a href="about.html" class="block px-4 py-2">About</a>
+      <a href="web.html" class="block px-4 py-2">Web Development</a>
+      <a href="data_science.html" class="block px-4 py-2">Data Science</a>
+      <a href="contact.html" class="block px-4 py-2">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="about-section">
-      <div class="container">
-        <div class="about-grid">
-          <div class="about-info">
-            <h2>About Me</h2>
-            <img src="assets/images/profile.jpg" alt="Profile Photo" class="profile-img">
-            <p>I'm a passionate data science enthusiast and web developer, currently expanding my skills in machine learning and AI. My journey in tech began with my studies at BYU Pathway Worldwide, and I've been building projects ever since.</p>
-            <div class="skills">
-              <h3>Skills</h3>
-              <div class="skill-icons">
-                <span class="skill-icon">Python</span>
-                <span class="skill-icon">Pandas</span>
-                <span class="skill-icon">TensorFlow</span>
-                <span class="skill-icon">HTML/CSS</span>
-                <span class="skill-icon">JavaScript</span>
-              </div>
-            </div>
-          </div>
-          <div class="certificates">
-            <h3>Certificates</h3>
-            <div class="certificate-grid">
-              <div class="certificate-card">
-                <h4>BYU Pathway Worldwide</h4>
-                <p>Certificate of Completion</p>
-                <p class="date">2023</p>
-                <p>Completed the [Program Name] program with focus on [specific skills].</p>
-              </div>
-              <div class="certificate-card coming-soon">
-                <h4>More Coming Soon</h4>
-                <p>I'm constantly learning and adding new certifications</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- About Section -->
+  <section class="py-16">
+    <div class="container mx-auto md:flex items-center gap-8 px-4">
+      <div class="md:w-1/2 scroll-reveal">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p>I’m currently completing my Associate Degree in System Analysis and Development and pursuing a Bachelor’s in Software Development at BYU. Passionate about data science and artificial intelligence, I focus my career on these cutting-edge fields. To showcase my projects, skills, and growth in these areas, I’ve created this website as my professional portfolio. Explore my work and join me on this exciting journey into the world of AI and data-driven solutions!</p>
       </div>
-    </section>
-  </main>
+      <div class="md:w-1/2 mt-8 md:mt-0 scroll-reveal">
+        <img src="assets/images/profile.jpg" alt="Lucas Miranda Profile" class="rounded-lg shadow-lg mx-auto" loading="lazy" />
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-primary py-6">
+    <div class="container mx-auto text-center space-x-4">
+      <a href="#" class="hover:text-accent">LinkedIn</a>
+      <a href="#" class="hover:text-accent">Instagram</a>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

@@ -1,72 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio | Data Science & Web Development</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucas Miranda Portfolio</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#283618',
+            secondary: '#B7B7A4',
+            background: '#F0EFEB',
+            accent: '#E9C46A'
+          }
+        }
+      }
+    };
+  </script>
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
-<body>
-  <header>
-    <div class="container">
-      <h1 class="logo">My Portfolio</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="dropdown">
-            <a href="#">Projects</a>
-            <div class="dropdown-content">
-              <a href="projects/web.html">Web Development</a>
-              <a href="projects/data-science.html">Data Science & AI</a>
-            </div>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
+<body class="bg-background text-primary font-sans antialiased">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
+    <div class="container mx-auto flex items-center justify-between p-4">
+      <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="index.html" class="hover:text-accent">Home</a>
+        <a href="about.html" class="hover:text-accent">About</a>
+        <div class="relative group">
+          <button class="flex items-center hover:text-accent focus:outline-none">
+            Projects <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20"><path d="M5.5 7.5L10 12l4.5-4.5"/></svg>
+          </button>
+          <ul class="absolute top-full left-0 mt-2 bg-white dark:bg-primary shadow-lg opacity-0 group-hover:opacity-100 transition-opacity rounded">
+            <li><a href="web.html" class="block px-4 py-2 hover:bg-accent hover:text-white">Web Development</a></li>
+            <li><a href="data_science.html" class="block px-4 py-2 hover:bg-accent hover:text-white">Data Science</a></li>
+          </ul>
         </div>
+        <a href="contact.html" class="hover:text-accent">Contact</a>
       </nav>
+      <div class="flex items-center space-x-4 md:hidden">
+        <button id="dark-toggle" class="p-2 rounded focus:outline-none">🌙</button>
+        <button id="menu-btn" class="p-2 focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
     </div>
+    <nav id="mobile-menu" class="hidden bg-white dark:bg-primary">
+      <a href="index.html" class="block px-4 py-2">Home</a>
+      <a href="about.html" class="block px-4 py-2">About</a>
+      <a href="web.html" class="block px-4 py-2">Web Development</a>
+      <a href="data_science.html" class="block px-4 py-2">Data Science</a>
+      <a href="contact.html" class="block px-4 py-2">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container">
-        <h2>Transforming Data into Intelligent Solutions</h2>
-        <p>Web Development, Machine Learning, and everything in between.</p>
-        <a href="#projects" class="btn">Explore My Work</a>
-      </div>
-    </section>
+  <!-- Hero -->
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <img src="assets/images/hero-bg.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="relative text-center px-4 z-10">
+      <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl scroll-reveal">Transforming Data into Intelligent Solutions</h1>
+      <p class="mt-4 text-lg md:text-2xl text-white drop-shadow-lg scroll-reveal delay-200">Web Development, Data Science, AI/Machine Learning, and everything in between</p>
+      <a href="#projects" class="inline-block mt-8 px-6 py-3 bg-accent text-primary font-medium rounded hover:opacity-90 scroll-reveal delay-400">Explore My Work</a>
+    </div>
+  </section>
 
-    <section id="projects" class="featured-projects">
-      <div class="container">
-        <h3>Featured Projects</h3>
-        <div class="project-grid">
-          <div class="project-card">
-            <h4>Web Development</h4>
-            <p>View my front-end projects and websites</p>
-            <a href="projects/web.html" class="btn">View Projects</a>
-          </div>
-          <div class="project-card">
-            <h4>Data Science</h4>
-            <p>Machine Learning and AI projects</p>
-            <a href="projects/data-science.html" class="btn">View Projects</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+  <!-- Footer -->
+  <footer class="bg-white dark:bg-primary py-6">
+    <div class="container mx-auto text-center space-x-4">
+      <a href="#" class="hover:text-accent">LinkedIn</a>
+      <a href="#" class="hover:text-accent">Instagram</a>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
 </body>
 </html>

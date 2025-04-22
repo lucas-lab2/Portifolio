@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Lucas Miranda</title>
+  <title>Web Development - Lucas Miranda</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- GLightbox -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body class="bg-background text-primary font-sans antialiased">
   <!-- Header -->
@@ -34,23 +36,29 @@
     </nav>
   </header>
 
-  <!-- Contact Form -->
-  <section class="py-16">
-    <div class="container mx-auto md:flex gap-8 px-4">
-      <div class="md:w-1/2 scroll-reveal">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p>Recife, Pernambuco, Brasil</p>
-        <p>📧 lucasfelipedm880@gmail.com</p>
-      </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 scroll-reveal">
-        <form action="https://formsubmit.co/lucasfelipedm880@gmail.com" method="POST" class="space-y-4">
-          <input type="hidden" name="_subject" value="New message from portfolio site!">
-          <input type="text" name="Name" placeholder="Name" required class="w-full border rounded px-4 py-2" />
-          <input type="text" name="Phone" placeholder="Phone Number" class="w-full border rounded px-4 py-2" />
-          <input type="email" name="Email" placeholder="Email Address" required class="w-full border rounded px-4 py-2" />
-          <textarea name="Message" placeholder="Message" required class="w-full border rounded px-4 py-2 h-32"></textarea>
-          <button type="submit" class="w-full bg-accent text-primary font-medium py-3 rounded hover:opacity-90">Send Message</button>
-        </form>
+  <!-- Web Projects Gallery -->
+  <section id="projects" class="py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-8 scroll-reveal">Web Development Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="scroll-reveal">
+          <a href="assets/images/project1.jpg" class="glightbox">
+            <img src="assets/images/project1.jpg" alt="Project 1" class="rounded-lg shadow-lg mx-auto" loading="lazy" />
+          </a>
+          <h3 class="mt-4 font-semibold">Project One</h3>
+        </div>
+        <div class="scroll-reveal">
+          <a href="assets/images/project2.jpg" class="glightbox">
+            <img src="assets/images/project2.jpg" alt="Project 2" class="rounded-lg shadow-lg mx-auto" loading="lazy" />
+          </a>
+          <h3 class="mt-4 font-semibold">Project Two</h3>
+        </div>
+        <div class="scroll-reveal">
+          <a href="assets/images/project3.jpg" class="glightbox">
+            <img src="assets/images/project3.jpg" alt="Project 3" class="rounded-lg shadow-lg mx-auto" loading="lazy" />
+          </a>
+          <h3 class="mt-4 font-semibold">Project Three</h3>
+        </div>
       </div>
     </div>
   </section>
@@ -64,6 +72,7 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script src="assets/js/scripts.js"></script>
 </body>
 </html>

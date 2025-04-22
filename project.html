@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - Lucas Miranda</title>
+  <title>Projects - Lucas Miranda</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-background text-primary font-sans antialiased">
@@ -34,23 +34,13 @@
     </nav>
   </header>
 
-  <!-- Contact Form -->
-  <section class="py-16">
-    <div class="container mx-auto md:flex gap-8 px-4">
-      <div class="md:w-1/2 scroll-reveal">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p>Recife, Pernambuco, Brasil</p>
-        <p>📧 lucasfelipedm880@gmail.com</p>
-      </div>
-      <div class="md:w-1/2 mt-8 md:mt-0 scroll-reveal">
-        <form action="https://formsubmit.co/lucasfelipedm880@gmail.com" method="POST" class="space-y-4">
-          <input type="hidden" name="_subject" value="New message from portfolio site!">
-          <input type="text" name="Name" placeholder="Name" required class="w-full border rounded px-4 py-2" />
-          <input type="text" name="Phone" placeholder="Phone Number" class="w-full border rounded px-4 py-2" />
-          <input type="email" name="Email" placeholder="Email Address" required class="w-full border rounded px-4 py-2" />
-          <textarea name="Message" placeholder="Message" required class="w-full border rounded px-4 py-2 h-32"></textarea>
-          <button type="submit" class="w-full bg-accent text-primary font-medium py-3 rounded hover:opacity-90">Send Message</button>
-        </form>
+  <!-- Projects Menu -->
+  <section class="py-16 text-center scroll-reveal">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-4">Select a Project Category</h2>
+      <div class="mt-8 flex flex-col md:flex-row justify-center gap-6">
+        <a href="web.html" class="px-6 py-4 bg-accent text-primary rounded hover:opacity-90">Web Development</a>
+        <a href="data_science.html" class="px-6 py-4 bg-accent text-primary rounded hover:opacity-90">Data Science</a>
       </div>
     </div>
   </section>
