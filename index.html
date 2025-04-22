@@ -7,7 +7,6 @@
   <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <script>
     tailwind.config = {
       darkMode: 'class',
@@ -23,15 +22,15 @@
       }
     };
   </script>
-  <!-- GLightbox -->
+  <!-- GLightbox CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body class="bg-background text-primary font-sans antialiased flex flex-col min-h-screen">
   <!-- Header -->
-  <main class="flex-grow">
   <header class="sticky top-0 z-50 bg-white dark:bg-primary shadow-md">
     <div class="container mx-auto flex items-center justify-between p-4">
       <a href="index.html" class="text-2xl font-bold">Lucas Miranda</a>
+      <!-- Desktop Nav -->
       <nav class="hidden md:flex space-x-6 items-center">
         <a href="index.html" class="hover:text-accent">Home</a>
         <a href="about.html" class="hover:text-accent">About</a>
@@ -46,62 +45,59 @@
         </div>
         <a href="contact.html" class="hover:text-accent">Contact</a>
       </nav>
+      <!-- Mobile Controls -->
       <div class="flex items-center space-x-4 md:hidden">
         <button id="dark-toggle" class="p-2 rounded focus:outline-none">🌙</button>
         <button id="menu-btn" class="p-2 focus:outline-none">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
     </div>
+    <!-- Mobile Nav -->
     <nav id="mobile-menu" class="hidden bg-white dark:bg-primary">
-      <a href="index.html" class="block px-4 py-2">Home</a>
-      <a href="about.html" class="block px-4 py-2">About</a>
-      <a href="web.html" class="block px-4 py-2">Web Development</a>
-      <a href="data_science.html" class="block px-4 py-2">Data Science</a>
-      <a href="contact.html" class="block px-4 py-2">Contact</a>
+      <a href="index.html" class="block px-4 py-2 hover:bg-secondary">Home</a>
+      <a href="about.html" class="block px-4 py-2 hover:bg-secondary">About</a>
+      <a href="web.html" class="block px-4 py-2 hover:bg-secondary">Web Development</a>
+      <a href="data_science.html" class="block px-4 py-2 hover:bg-secondary">Data Science</a>
+      <a href="contact.html" class="block px-4 py-2 hover:bg-secondary">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="relative h-screen flex items-center justify-center overflow-hidden">
-    <img src="assets/images/hero-bg.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div class="relative text-center px-4 z-10">
-      <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl scroll-reveal">Transforming Data into Intelligent Solutions</h1>
-      <p class="mt-4 text-lg md:text-2xl text-white drop-shadow-lg scroll-reveal delay-200">Web Development, Data Science, AI/Machine Learning, and everything in between</p>
-      
-    </div>
-  </section>
-
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Hero -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+      <img src="assets/images/hero-bg.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div class="relative text-center px-4 z-10">
+        <h1 class="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl scroll-reveal">Transforming Data into Intelligent Solutions</h1>
+        <p class="mt-4 text-lg md:text-2xl text-white drop-shadow-lg scroll-reveal delay-200">Web Development, Data Science, AI/Machine Learning, and everything in between</p>
+      </div>
+    </section>
   </main>
 
   <!-- Footer -->
-  
   <footer class="mt-auto bg-white dark:bg-primary py-6 border-t border-gray-300 dark:border-gray-600">
     <div class="container mx-auto text-center space-x-4">
-      <a
-        href="https://www.linkedin.com/in/lucas-miranda-061242191/"
-        target="_blank"
-        class="hover:text-accent"
-      >
-        <i class="fab fa-linkedin fa-2x"></i>
-      </a>
-      <a
-        href="https://www.instagram.com/lucasfelipedm/"
-        target="_blank"
-        class="hover:text-accent"
-      >
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
-      <a
-        href="https://github.com/lucas-lab2"
-        target="_blank"
-        class="hover:text-accent"
-      >
-        <i class="fab fa-github fa-2x"></i>
-      </a>
+      <a href="https://www.linkedin.com/in/lucas-miranda-061242191/" target="_blank" class="hover:text-accent"><i class="fab fa-linkedin fa-2x"></i></a>
+      <a href="https://www.instagram.com/lucasfelipedm/" target="_blank" class="hover:text-accent"><i class="fab fa-instagram fa-2x"></i></a>
+      <a href="https://github.com/lucas-lab2" target="_blank" class="hover:text-accent"><i class="fab fa-github fa-2x"></i></a>
     </div>
   </footer>
-  
+
+  <!-- JS Assets -->
+  <script src="assets/js/scripts.js"></script>
+  <!-- Inline fallback for menu toggle if needed -->
+  <script>
+    if (!document.getElementById('menu-btn')) return;
+    document.getElementById('menu-btn').addEventListener('click', function() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+  <!-- GLightbox JS -->
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    const lightbox = GLightbox({ selector: '.glightbox' });
+  </script>
 </body>
 </html>
