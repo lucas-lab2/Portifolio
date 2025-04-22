@@ -1,2 +1,23 @@
-body { padding-top: 70px; }
-.placeholder { color: #283618; }
+:root {
+    --primary: #283618;
+    --secondary: #B7B7A4;
+    --background: #F0EFEB;
+    --accent: #D4D4D4;
+    --text: #333;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--primary);
+}
+
+/* ... rest of CSS from provided code ... */
