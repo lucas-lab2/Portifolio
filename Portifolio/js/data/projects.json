@@ -1,0 +1,25 @@
+{
+  "web": [
+    {
+      "title": "Portfolio Template",
+      "description": "Site responsivo com Bootstrap",
+      "github_url": "https://seuusuario.github.io/portfolio-template",
+      "tech": [
+        "HTML",
+        "Bootstrap",
+        "JS"
+      ]
+    }
+  ],
+  "data-science": [
+    {
+      "title": "Diabetes Predictor",
+      "description": "Modelo de ML com 89% de acur\u00e1cia",
+      "github_url": "https://seuusuario.github.io/diabetes-predictor",
+      "tech": [
+        "Python",
+        "Scikit-learn"
+      ]
+    }
+  ]
+}
