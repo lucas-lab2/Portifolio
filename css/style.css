@@ -1,97 +1,86 @@
-/* css/style.css */
 :root {
     --primary: #283618;
     --secondary: #B7B7A4;
     --background: #F0EFEB;
     --accent: #D4D4D4;
     --text: #333;
-}
-
-header {
-    padding: 0.5rem 0; /* Reduced from 1rem */
-    height: 60px; /* Fixed height */
   }
   
-  .container {
-    padding: 0 20px; /* Ensure consistent padding */
-  }
+  /* Font Import - Add this to HTML head */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
   
-  .logo {
-    font-size: 1.2rem; /* Slightly smaller logo */
-    margin: 0;
-    line-height: 60px; /* Vertically center */
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    line-height: 60px; /* Vertically center nav items */
-  }
-  
-  nav ul li {
-    margin-left: 1.5rem; /* Reduced from 2rem */
-  }
-
-body {
-    font-family: 'Lato', sans-serif;
+  /* Base Styles */
+  body {
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--background);
     margin: 0;
     padding: 0;
-}
-
-h1, h2, h3, h4 {
+  }
+  
+  h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     color: var(--primary);
-}
-
-.container {
+  }
+  
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  
+  .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
-
-/* Header Styles */
-header {
+  }
+  
+  /* Fixed Header */
+  header {
     background-color: var(--primary);
     color: white;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+    height: 60px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo {
+  }
+  
+  .logo {
     margin: 0;
-    font-size: 1.5rem;
-}
-
-nav ul {
+    font-size: 1.2rem;
+    line-height: 60px;
+  }
+  
+  nav ul {
     display: flex;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 2rem;
+    margin: 0;
+    padding: 0;
+    line-height: 60px;
+  }
+  
+  nav ul li {
+    margin-left: 1.5rem;
     position: relative;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
-}
-
-nav ul li a:hover {
+  }
+  
+  nav ul li a:hover {
     color: var(--accent);
-}
-
-/* Dropdown Menu */
-.dropdown-content {
+  }
+  
+  /* Dropdown Menu */
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
@@ -99,153 +88,103 @@ nav ul li a:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.1);
     z-index: 1;
     border-radius: 4px;
-}
-
-.dropdown-content a {
+  }
+  
+  .dropdown-content a {
     color: var(--primary);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-}
-
-.dropdown-content a:hover {
+  }
+  
+  .dropdown-content a:hover {
     background-color: var(--background);
-}
-
-.dropdown:hover .dropdown-content {
+  }
+  
+  .dropdown:hover .dropdown-content {
     display: block;
     animation: fadeIn 0.3s;
-}
-
-@keyframes fadeIn {
+  }
+  
+  @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
-}
-
-/* Hero Section */
-.hero {
-    height: 100vh;
+  }
+  
+  /* Main Content Padding */
+  main {
+    padding-top: 80px;
+  }
+  
+  /* Hero Section */
+  .hero {
+    min-height: calc(100vh - 80px);
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(240, 239, 235, 0.8), rgba(240, 239, 235, 0.8)), 
-                url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
     text-align: center;
-    padding-top: 80px;
-}
-
-.hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    animation: slideUp 1s ease-out;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-    animation: slideUp 1s ease-out 0.2s forwards;
-    opacity: 0;
-}
-
-.btn {
-    display: inline-block;
-    background-color: var(--primary);
-    color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: all 0.3s;
-    animation: slideUp 1s ease-out 0.4s forwards;
-    opacity: 0;
-}
-
-.btn:hover {
-    background-color: var(--secondary);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-/* Projects Section */
-.featured-projects {
-    padding: 5rem 0;
-    background-color: white;
-}
-
-.project-grid {
+  }
+  
+  /* About Page Specific */
+  .about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: var(--background);
+  }
+  
+  .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .certificate-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .certificate-card {
+    background-color: var(--secondary);
+    padding: 1.5rem;
     border-radius: 8px;
-    padding: 2rem;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
-
-.project-card h4 {
-    margin-top: 0;
-}
-
-/* Footer */
-footer {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 3rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
     .hamburger {
-        display: block;
-        cursor: pointer;
+      display: block;
+      cursor: pointer;
     }
-
+  
     nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 70px;
-        left: 0;
-        background-color: var(--primary);
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: var(--primary);
     }
-
+  
     nav ul.show {
-        display: flex;
+      display: flex;
     }
-
+  
     nav ul li {
-        margin: 0;
-        padding: 1rem;
-        text-align: center;
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
     }
-
+  
     .dropdown-content {
-        position: static;
-        display: none;
-        width: 100%;
+      position: static;
+      display: none;
+      width: 100%;
     }
-
-    .hero h2 {
-        font-size: 2rem;
+  
+    .about-grid {
+      grid-template-columns: 1fr;
     }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-}
+  }
