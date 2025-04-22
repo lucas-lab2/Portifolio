@@ -5,7 +5,7 @@ document.getElementById('dark-toggle').addEventListener('click', () => {
 });
 
 // Mobile menu toggle
-document.getElementById('menu-toggle').addEventListener('click', () => {
+document.getElementById('menu-btn').addEventListener('click', () => {
   document.getElementById('mobile-menu').classList.toggle('hidden');
 });
 
